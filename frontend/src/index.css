@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global ───────────────────────────────────────────────────────────────── */
+body {
+  background: #080d1a;
+  color: #e2e8f0;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1729;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f8ef7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7aa8f9;
+}
+
+/* ── Utility classes ─────────────────────────────────────────────────────── */
+.card {
+  background: #141e33;
+  border: 1px solid rgba(79, 142, 247, 0.15);
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+
+/* ── Table ──────────────────────────────────────────────────────────────── */
+.cp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cp-table thead tr {
+  background: #0f1729;
+}
+.cp-table thead th {
+  color: #8b9ab5;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.cp-table tbody tr {
+  border-bottom: 1px solid rgba(79, 142, 247, 0.07);
+  transition: background 0.15s;
+}
+.cp-table tbody tr:hover {
+  background: rgba(79, 142, 247, 0.05);
+}
+.cp-table tbody td {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+/* ── Badge ──────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

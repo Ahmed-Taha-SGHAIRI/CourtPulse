@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_games
+    description: "Cleaned and filtered NBA games for the 2024 season."
+    columns:
+      - name: game_id
+        description: "Unique identifier for the game."
+        tests:
+          - not_null
+          - unique
+      - name: game_date
+        description: "Date the game was played."
+        tests:
+          - not_null
+      - name: status
+        description: "Game status (should contain 'Final' for completed games)."
+        tests:
+          - not_null
+      - name: winner
+        description: "Name of the winning team."
+        tests:
+          - not_null
+
+  - name: stg_player_stats
+    description: "Active players joined with their 2024 season averages and a computed fantasy score."
+    columns:
+      - name: player_id
+        description: "Unique player identifier."
+        tests:
+          - not_null
+          - unique
+      - name: player_name
+        description: "Full player name."
+        tests:
+          - not_null
+      - name: pts
+        description: "Average points per game."
+      - name: fantasy_score
+        description: "Computed fantasy score."
